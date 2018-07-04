@@ -12,7 +12,7 @@ import java.util.List;
 public class ProductOperations {
 
     private SimpleDBWrapper dbHelper;
-    private String[] PRODUCT_TABLE_COLUMNS = { SimpleDBWrapper.PRODUCT_ID, SimpleDBWrapper.PRODUCT_NAME, SimpleDBWrapper.PRODUCT_PRICE, SimpleDBWrapper.PRODUCT_LOCATION, SimpleDBWrapper.PRODUCT_SIZE};
+    private String[] PRODUCT_TABLE_COLUMNS = { SimpleDBWrapper.PRODUCT_ID, SimpleDBWrapper.PRODUCT_NAME, SimpleDBWrapper.PRODUCT_PRICE, SimpleDBWrapper.PRODUCT_LOCATION};
     private SQLiteDatabase database;
 
     public ProductOperations(Context context) {
@@ -32,7 +32,6 @@ public class ProductOperations {
         values.put(SimpleDBWrapper.PRODUCT_NAME, name);
         values.put(SimpleDBWrapper.PRODUCT_PRICE, price);
         values.put(SimpleDBWrapper.PRODUCT_LOCATION, location);
-        values.put(SimpleDBWrapper.PRODUCT_SIZE, size);
         long productId = database.insert(SimpleDBWrapper.PRODUCTS, null, values);
 
         Cursor cursor = database.query(SimpleDBWrapper.PRODUCTS,
@@ -69,7 +68,6 @@ public class ProductOperations {
         product.setName(cursor.getString(1));
         product.setPrice(cursor.getDouble(2));
         product.setLocation(cursor.getString(3));
-        product.setSize(cursor.getInt(4));
         return product;
     }
 

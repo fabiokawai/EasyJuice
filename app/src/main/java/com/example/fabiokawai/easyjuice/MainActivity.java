@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     Double price = (Double)data.getDoubleExtra("price", 0.00);
                     int size = data.getIntExtra("size", 0);
                     ArrayAdapter adapter = (ArrayAdapter) list.getAdapter();
-                    Product product = productOperations.addProduct(name, price, location);
+                    Product product = productOperations.addProduct(name, price, location, size);
                     adapter.add(product);
                 }
                 catch (Exception e){
@@ -80,7 +80,12 @@ public class MainActivity extends AppCompatActivity {
         }
         if (requestCode == REQUEST_FIND_PRODUCT) {
             if (resultCode == RESULT_OK) {
+                String name = data.getStringExtra("name");
+                int distance = data.getIntExtra("distance", 3);
+
                 Intent showResult = new Intent(this, SearchResultActivity.class);
+                showResult.putExtra("name", name);
+                showResult.putExtra("distance", distance);
                 startActivityForResult(showResult, REQUEST_SHOW_RESULT);
             }
             else{

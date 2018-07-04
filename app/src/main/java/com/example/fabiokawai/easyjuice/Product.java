@@ -5,7 +5,6 @@ public class Product {
     private String name;
     private double price;
     private String location;
-    private int size;
 
     public String toString(){
         return "Produto: " + name + " , R$" + Double.toString(price) + " em " + location;
@@ -43,11 +42,5 @@ public class Product {
         this.location = location;
     }
 
-    public int getSize() {
-        return size;
-    }
 
-    public void setSize(int size) {
-        this.size = size;
-    }
 }

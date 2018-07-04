@@ -11,13 +11,12 @@ public class SimpleDBWrapper extends SQLiteOpenHelper{
     public static final String PRODUCT_NAME = "_name";
     public static final String PRODUCT_PRICE = "_price";
     public static final String PRODUCT_LOCATION = "_location";
-    public static final String PRODUCT_SIZE = "_size";
 
     private static final String DATABASE_NAME = "Products.db";
     private static final int DATABASE_VERSION = 1;
 
     private static final String DATABASE_CREATE = "create table " + PRODUCTS + "(" + PRODUCT_ID + " integer primary key autoincrement, "
-            + PRODUCT_NAME + " text not null, " + PRODUCT_PRICE + " real not null, " + PRODUCT_LOCATION + " text not null, " + PRODUCT_SIZE + " integer not null);";
+            + PRODUCT_NAME + " text not null, " + PRODUCT_PRICE + " real not null, " + PRODUCT_LOCATION + " text not null);";
 
 
 
