@@ -84,7 +84,7 @@
             android:orientation="horizontal">
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/sizeSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -99,7 +99,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/txtLocation"
+            android:id="@+id/txtGps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
