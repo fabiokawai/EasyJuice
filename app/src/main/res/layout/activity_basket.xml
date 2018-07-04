@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gabriel.borba.easyjuice.activities.BasketActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nome"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="50"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Estabelecimento"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/estabelecimento"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="50"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Preço:"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/preco"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+     <ImageButton
+         android:id="@+id/latinha"
+         android:background="@mipmap/ic_latinha"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:onClick="selecionaLatinha">
+     </ImageButton>
+
+    <ImageButton
+        android:id="@+id/lata"
+        android:background="@mipmap/ic_lata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="selecionaLata">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/latao"
+        android:background="@mipmap/ic_latao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="selecionaLatao">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/longneck"
+        android:background="@mipmap/ic_longneck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="selecionaLongNeck">
+    </ImageButton>
+
+        <ImageButton
+            android:id="@+id/garrafa"
+            android:background="@mipmap/ic_garrafa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="selecionaGarrafa">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/litrao"
+            android:background="@mipmap/ic_litrao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="selecionaLitrao">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/barril"
+            android:background="@mipmap/ic_barril"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="selecionaBarril">
+        </ImageButton>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Localização"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#dedec9"
+        android:textColor="#484848"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#dedec9"
+        android:textColor="#484848"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tamanhobebida"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>
